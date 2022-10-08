@@ -621,9 +621,7 @@ footer address {
 .clients-list-element {
     width: 170px;
     height: 92px;
-    margin-right: 30px;
-    border: 1px solid rgba(175, 177, 184, 1);
-    border-radius: 4px;
+    margin-right: 30px; 
 }
 
 .clients-list-element:nth-child(6n+6) {
@@ -637,7 +635,11 @@ footer address {
     width: 170px;
     height: 92px;
 
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-list-icon {
@@ -646,9 +648,15 @@ footer address {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.clients-list-link:hover .clients-list-icon,
-.clients-list-link:focus .clients-list-icon {
-    fill: var(--accent-color);
+.clients-list-link:hover,
+.clients-list-link:focus {
+    border: 1px solid rgba(33, 150, 243, 1);
+    border-radius: 4px;
+}
+
+.clients-list-link:hover   .clients-list-icon,
+.clients-list-link:focus   .clients-list-icon {
+    fill: var(--accent-color);   
 }
 
 /*======= Портфолио =======*/
@@ -776,7 +784,7 @@ footer address {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 101%;
     height: 100%;
 
     transform: translateY(100%);
